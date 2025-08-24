@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما | Mobix - فروشگاه آنلاین وسایل دیجیتال</title>
+    <meta name="description" content="درباره Mobix - فروشگاه آنلاین وسایل دیجیتال. ما با بیش از 5 سال تجربه در زمینه فروش محصولات دیجیتال، بهترین خدمات را به مشتریان ارائه می‌دهیم.">
+    <meta name="keywords" content="درباره ما, Mobix, فروشگاه دیجیتال, تاریخچه, تیم, ماموریت, چشم‌انداز">
+    <meta name="author" content="Mobix">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mobix.ir/about.html">
+    <meta property="og:title" content="درباره ما | Mobix">
+    <meta property="og:description" content="درباره Mobix - فروشگاه آنلاین وسایل دیجیتال">
+    <meta property="og:image" content="https://mobix.ir/assets/img/about-banner.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mobix.ir/about.html">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        .about-hero {
+            background: var(--gradient-secondary);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .about-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stats-section {
+            background: var(--card-bg);
+            padding: 4rem 0;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gradient-primary);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-content {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            width: 45%;
+            margin-left: 5%;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 50%;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 2rem;
+            width: 20px;
+            height: 20px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        
+        .team-section {
+            background: var(--dark-bg);
+            padding: 4rem 0;
+        }
+        
+        .team-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-blue);
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 3rem;
+            color: var(--text-primary);
+        }
+        
+        .values-section {
+            padding: 4rem 0;
+        }
+        
+        .value-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--text-primary);
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-mobile-alt me-2"></i>
+                <span>Mobix</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تماس</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <a href="cart.html" class="btn btn-outline me-2 position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="cartCount">0</span>
+                    </a>
+                    
+                    <div class="dropdown">
+                        <button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html">ورود</a></li>
+                            <li><a class="dropdown-item" href="signup.html">ثبت نام</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="profile.html">پروفایل</a></li>
+                            <li><a class="dropdown-item" href="orders.html">سفارشات</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h1 class="hero-title">
+                            درباره <span class="text-gradient">Mobix</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            ما با بیش از 5 سال تجربه در زمینه فروش محصولات دیجیتال، متعهد به ارائه بهترین کیفیت و خدمات به مشتریان خود هستیم.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="contact.html" class="btn btn-primary btn-lg">
+                                <i class="fas fa-phone me-2"></i>تماس با ما
+                            </a>
+                            <a href="products.html" class="btn btn-outline btn-lg">
+                                <i class="fas fa-shopping-bag me-2"></i>مشاهده محصولات
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="./assets/img/logo.png" alt="About Mobix" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">مشتری راضی</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">محصول متنوع</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">سال تجربه</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">پشتیبانی</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="value-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="card-title">ماموریت ما</h3>
+                            <p class="card-text">
+                                ارائه بهترین محصولات دیجیتال با کیفیت تضمین شده و قیمت مناسب به مشتریان، همراه با خدمات پس از فروش عالی و پشتیبانی 24 ساعته.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="value-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="card-title">چشم‌انداز ما</h3>
+                            <p class="card-text">
+                                تبدیل شدن به برترین فروشگاه آنلاین وسایل دیجیتال در ایران و ارائه تجربه خرید آنلاین بی‌نظیر به مشتریان.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-5 bg-card">
+        <div class="container">
+            <h2 class="section-title">تاریخچه Mobix</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2019 - شروع کار</h4>
+                        <p>شروع فعالیت Mobix با تیمی کوچک و هدف ارائه محصولات دیجیتال با کیفیت</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2020 - گسترش فعالیت</h4>
+                        <p>افزایش تنوع محصولات و راه‌اندازی سیستم فروش آنلاین</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2021 - بهبود خدمات</h4>
+                        <p>راه‌اندازی سیستم پشتیبانی 24 ساعته و بهبود تجربه کاربری</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2022 - توسعه تکنولوژی</h4>
+                        <p>بهبود پلتفرم آنلاین و اضافه کردن ویژگی‌های جدید</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2023 - رهبر بازار</h4>
+                        <p>تبدیل شدن به یکی از برترین فروشگاه‌های آنلاین وسایل دیجیتال</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">ارزش‌های ما</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>رضایت مشتری</h4>
+                        <p>رضایت مشتریان ما در اولویت اول قرار دارد و تمام تلاش خود را برای ارائه بهترین خدمات انجام می‌دهیم.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>کیفیت تضمین شده</h4>
+                        <p>تمام محصولات ما دارای گارانتی معتبر و کیفیت تضمین شده هستند.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>اعتماد و شفافیت</h4>
+                        <p>ما متعهد به شفافیت کامل در تمام مراحل خرید و ارائه اطلاعات دقیق به مشتریان هستیم.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>نوآوری مداوم</h4>
+                        <p>ما همواره در حال بهبود و نوآوری در خدمات و محصولات خود هستیم.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>تیم متخصص</h4>
+                        <p>تیم ما متشکل از متخصصان با تجربه در زمینه تکنولوژی و فروش است.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>خدمات سریع</h4>
+                        <p>ارائه خدمات سریع و به موقع به مشتریان یکی از اصول مهم ماست.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">تیم ما</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>احمد محمدی</h4>
+                        <p class="text-muted" style="color: #ffffff;">مدیرعامل</p>
+                        <p>بیش از 10 سال تجربه در زمینه مدیریت و فروش آنلاین</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>فاطمه احمدی</h4>
+                        <p class="text-muted" style="color: #ffffff;">مدیر فنی</p>
+                        <p>متخصص در زمینه توسعه وب و مدیریت سیستم‌های آنلاین</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>علی رضایی</h4>
+                        <p class="text-muted" style="color: #ffffff;">مدیر فروش</p>
+                        <p>متخصص در زمینه بازاریابی و مدیریت فروش آنلاین</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>مریم کریمی</h4>
+                        <p class="text-muted" style="color: #ffffff;">پشتیبانی مشتریان</p>
+                        <p>متخصص در زمینه خدمات مشتریان و حل مشکلات</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-gradient">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h3 class="text-white mb-3">آماده شروع خرید هستید؟</h3>
+                    <p class="text-white-50 mb-4">به هزاران محصول با کیفیت و قیمت مناسب دسترسی داشته باشید</p>
+                    <a href="products.html" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-shopping-bag me-2"></i>مشاهده محصولات
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone me-2"></i>تماس با ما
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-section">
+                        <h5 class="footer-logo mb-3">
+                            <i class="fas fa-mobile-alt me-2"></i>Mobix
+                        </h5>
+                        <p class="text-muted">
+                            فروشگاه آنلاین Mobix، ارائه‌دهنده بهترین محصولات دیجیتال با کیفیت تضمین شده و قیمت مناسب.
+                        </p>
+                        <div class="social-links" style="list-style: none";>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>محصولات</h6>
+                        <ul class="footer-links" style="list-style: none";>
+                            <li><a href="products.html?category=mobile">موبایل</a></li>
+                            <li><a href="products.html?category=tablet">تبلت</a></li>
+                            <li><a href="products.html?category=laptop">لپ‌تاپ</a></li>
+                            <li><a href="products.html?category=desktop">کامپیوتر</a></li>
+                            <li><a href="products.html?category=accessories">لوازم جانبی</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>خدمات</h6>
+                        <ul class="footer-links" style="list-style: none";>
+                            <li><a href="about.html">درباره ما</a></li>
+                            <li><a href="contact.html">تماس</a></li>
+                            <li><a href="shipping.html">نحوه ارسال</a></li>
+                            <li><a href="warranty.html">گارانتی</a></li>
+                            <li><a href="return.html">بازگشت</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>حساب کاربری</h6>
+                        <ul class="footer-links" style="list-style: none";>
+                            <li><a href="login.html">ورود</a></li>
+                            <li><a href="signup.html">ثبت نام</a></li>
+                            <li><a href="profile.html">پروفایل</a></li>
+                            <li><a href="orders.html">سفارشات</a></li>
+                            <li><a href="wishlist.html">علاقه‌مندی‌ها</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>پشتیبانی</h6>
+                        <ul class="footer-links" style="list-style: none";>
+                            <li><a href="faq.html">سوالات متداول</a></li>
+                            <li><a href="contact.html">تماس با ما</a></li>
+                            <li><a href="privacy.html">حریم خصوصی</a></li>
+                            <li><a href="terms.html">قوانین و مقررات</a></li>
+                            <li><a href="help.html">راهنما</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; ۱۴۰۲ Mobix. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 

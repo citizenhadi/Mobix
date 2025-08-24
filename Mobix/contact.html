@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما | Mobix - فروشگاه آنلاین وسایل دیجیتال</title>
+    <meta name="description" content="تماس با Mobix - فروشگاه آنلاین وسایل دیجیتال. پشتیبانی 24 ساعته، شماره تماس، آدرس و فرم تماس برای ارتباط با ما.">
+    <meta name="keywords" content="تماس با ما, Mobix, پشتیبانی, شماره تماس, آدرس, فرم تماس">
+    <meta name="author" content="Mobix">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mobix.ir/contact.html">
+    <meta property="og:title" content="تماس با ما | Mobix">
+    <meta property="og:description" content="تماس با Mobix - فروشگاه آنلاین وسایل دیجیتال">
+    <meta property="og:image" content="https://mobix.ir/assets/img/contact-banner.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mobix.ir/contact.html">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        .contact-hero {
+            background: var(--gradient-secondary);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .contact-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-blue);
+        }
+        
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--text-primary);
+        }
+        
+        .contact-form {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+        
+        .form-floating {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-floating > .form-control {
+            background: var(--dark-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        
+        .form-floating > .form-control:focus {
+            background: var(--dark-bg);
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+            color: var(--text-primary);
+        }
+        
+        .form-floating > label {
+            color: var(--text-secondary);
+        }
+        
+        .form-floating > .form-control:focus ~ label,
+        .form-floating > .form-control:not(:placeholder-shown) ~ label {
+            color: var(--primary-blue);
+        }
+        
+        .map-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            height: 400px;
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: var(--dark-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+        
+        .working-hours {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+        
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .hour-item:last-child {
+            border-bottom: none;
+        }
+        
+        .day-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .day-hours {
+            color: var(--text-secondary);
+        }
+        
+        .today {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-mobile-alt me-2"></i>
+                <span>Mobix</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تماس</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <a href="cart.html" class="btn btn-outline me-2 position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="cartCount">0</span>
+                    </a>
+                    
+                    <div class="dropdown">
+                        <button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html">ورود</a></li>
+                            <li><a class="dropdown-item" href="signup.html">ثبت نام</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="profile.html">پروفایل</a></li>
+                            <li><a class="dropdown-item" href="orders.html">سفارشات</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="contact-content">
+                        <h1 class="hero-title">
+                            تماس با <span class="text-gradient">ما</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            ما آماده پاسخگویی به سوالات و درخواست‌های شما هستیم. تیم پشتیبانی ما 24 ساعته در خدمت شماست.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="tel:+989123456789" class="btn btn-primary btn-lg">
+                                <i class="fas fa-phone me-2"></i>تماس مستقیم
+                            </a>
+                            <a href="#contact-form" class="btn btn-outline btn-lg">
+                                <i class="fas fa-envelope me-2"></i>ارسال پیام
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="./assets/img/logo.png" alt="Contact Us" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>تماس تلفنی</h4>
+                        <p class="text-muted mb-3" style="color: #ffffff;">برای مشاوره و پشتیبانی با ما تماس بگیرید</p>
+                        <div class="contact-details">
+                            <p><strong>شماره تماس:</strong></p>
+                            <p><a href="tel:+989123456789" class="text-decoration-none">0912-345-6789</a></p>
+                            <p><a href="tel:+982188765432" class="text-decoration-none">021-8876-5432</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>ایمیل</h4>
+                        <p class="text-muted mb-3" style="color: #ffffff;">برای ارسال پیام و درخواست‌های خود</p>
+                        <div class="contact-details">
+                            <p><strong>ایمیل:</strong></p>
+                            <p><a href="mailto:info@mobix.ir" class="text-decoration-none">info@mobix.ir</a></p>
+                            <p><a href="mailto:support@mobix.ir" class="text-decoration-none">support@mobix.ir</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>آدرس</h4>
+                        <p class="text-muted mb-3" style="color: #ffffff;">دفتر مرکزی و فروشگاه ما</p>
+                        <div class="contact-details">
+                            <p><strong>آدرس:</strong></p>
+                            <p>تهران، خیابان ولیعصر، پلاک 123</p>
+                            <p>طبقه دوم، واحد 5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map Section -->
+    <section class="py-5 bg-card">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h3 class="mb-4">ارسال پیام</h3>
+                        <form id="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="firstName" placeholder="نام" required>
+                                        <label for="firstName">نام</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="lastName" placeholder="نام خانوادگی" required>
+                                        <label for="lastName">نام خانوادگی</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="ایمیل" required>
+                                        <label for="email">ایمیل</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="phone" placeholder="شماره تماس" required>
+                                        <label for="phone">شماره تماس</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-floating">
+                                <select class="form-control" id="subject" required>
+                                    <option value="">انتخاب موضوع</option>
+                                    <option value="general">سوال عمومی</option>
+                                    <option value="support">پشتیبانی فنی</option>
+                                    <option value="order">سفارش</option>
+                                    <option value="complaint">شکایت</option>
+                                    <option value="suggestion">پیشنهاد</option>
+                                </select>
+                                <label for="subject">موضوع</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" placeholder="پیام شما" style="height: 150px" required></textarea>
+                                <label for="message">پیام شما</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-paper-plane me-2"></i>ارسال پیام
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Map & Working Hours -->
+                <div class="col-lg-4">
+                    <div class="row g-4">
+                        <!-- Map -->
+                        <div class="col-12">
+                            <div class="map-container">
+                                <div class="map-placeholder">
+                                    <div class="text-center">
+                                        <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
+                                        <p>نقشه موقعیت ما</p>
+                                        <small>تهران، خیابان ولیعصر</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Working Hours -->
+                        <div class="col-12">
+                            <div class="working-hours">
+                                <h5 class="mb-3">ساعات کاری</h5>
+                                <div class="hour-item">
+                                    <span class="day-name">شنبه تا چهارشنبه</span>
+                                    <span class="day-hours">9:00 - 18:00</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span class="day-name">پنجشنبه</span>
+                                    <span class="day-hours">9:00 - 16:00</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span class="day-name">جمعه</span>
+                                    <span class="day-hours">تعطیل</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span class="day-name today">پشتیبانی آنلاین</span>
+                                    <span class="day-hours today">24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">سوالات متداول</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    چگونه می‌توانم محصولی را سفارش دهم؟
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    برای سفارش محصول، ابتدا در سایت ثبت نام کنید، سپس محصول مورد نظر را به سبد خرید اضافه کرده و مراحل پرداخت را تکمیل کنید.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    مدت زمان ارسال چقدر است؟
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    ارسال در تهران 1-2 روز کاری و در سایر شهرها 2-4 روز کاری طول می‌کشد. ارسال رایگان برای سفارشات بالای 500 هزار تومان.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    آیا محصولات گارانتی دارند؟
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    بله، تمام محصولات ما دارای گارانتی معتبر و رسمی هستند. مدت گارانتی بر اساس نوع محصول متفاوت است.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqAccordion2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    چگونه می‌توانم محصول را بازگردانم؟
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    تا 7 روز پس از دریافت محصول می‌توانید آن را بازگردانید. محصول باید در شرایط اولیه و بدون استفاده باشد.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    آیا امکان پرداخت در محل وجود دارد؟
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    بله، امکان پرداخت در محل برای سفارشات در تهران و برخی شهرهای بزرگ وجود دارد.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    چگونه می‌توانم وضعیت سفارش را پیگیری کنم؟
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    پس از ثبت سفارش، کد پیگیری برای شما ارسال می‌شود که می‌توانید از طریق پنل کاربری یا تماس با ما وضعیت سفارش را پیگیری کنید.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-section">
+                        <h5 class="footer-logo mb-3">
+                            <i class="fas fa-mobile-alt me-2"></i>Mobix
+                        </h5>
+                        <p class="text-muted">
+                            فروشگاه آنلاین Mobix، ارائه‌دهنده بهترین محصولات دیجیتال با کیفیت تضمین شده و قیمت مناسب.
+                        </p>
+                        <div class="social-links" style="list-style: none">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>محصولات</h6>
+                        <ul class="footer-links" style="list-style: none">
+                            <li><a href="products.html?category=mobile">موبایل</a></li>
+                            <li><a href="products.html?category=tablet">تبلت</a></li>
+                            <li><a href="products.html?category=laptop">لپ‌تاپ</a></li>
+                            <li><a href="products.html?category=desktop">کامپیوتر</a></li>
+                            <li><a href="products.html?category=accessories">لوازم جانبی</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>خدمات</h6>
+                        <ul class="footer-links" style="list-style: none">
+                            <li><a href="about.html">درباره ما</a></li>
+                            <li><a href="contact.html">تماس</a></li>
+                            <li><a href="shipping.html">نحوه ارسال</a></li>
+                            <li><a href="warranty.html">گارانتی</a></li>
+                            <li><a href="return.html">بازگشت</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>حساب کاربری</h6>
+                        <ul class="footer-links" style="list-style: none">
+                            <li><a href="login.html">ورود</a></li>
+                            <li><a href="signup.html">ثبت نام</a></li>
+                            <li><a href="profile.html">پروفایل</a></li>
+                            <li><a href="orders.html">سفارشات</a></li>
+                            <li><a href="wishlist.html">علاقه‌مندی‌ها</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>پشتیبانی</h6>
+                        <ul class="footer-links" style="list-style: none">
+                            <li><a href="faq.html">سوالات متداول</a></li>
+                            <li><a href="contact.html">تماس با ما</a></li>
+                            <li><a href="privacy.html">حریم خصوصی</a></li>
+                            <li><a href="terms.html">قوانین و مقررات</a></li>
+                            <li><a href="help.html">راهنما</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; ۱۴۰۲ Mobix. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Handle contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Validate form
+            if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.subject || !formData.message) {
+                showNotification('لطفاً تمام فیلدها را پر کنید', 'error');
+                return;
+            }
+            
+            if (!validateEmail(formData.email)) {
+                showNotification('لطفاً ایمیل معتبر وارد کنید', 'error');
+                return;
+            }
+            
+            if (!validatePhone(formData.phone)) {
+                showNotification('لطفاً شماره موبایل معتبر وارد کنید', 'error');
+                return;
+            }
+            
+            // Show success message
+            showNotification('پیام شما با موفقیت ارسال شد. در اسرع وقت با شما تماس خواهیم گرفت.', 'success');
+            
+            // Reset form
+            document.getElementById('contact-form').reset();
+        });
+        
+        // Validate email
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        
+        // Validate phone
+        function validatePhone(phone) {
+            const re = /^09[0-9]{9}$/;
+            return re.test(phone);
+        }
+        
+        // Show notification
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type === 'error' ? 'danger' : type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+</html> 

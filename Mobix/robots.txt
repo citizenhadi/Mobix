@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mobix.ir/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /database/
+Disallow: /uploads/
+Disallow: /logs/
+
+# Allow important pages
+Allow: /products.html
+Allow: /product-detail.html
+Allow: /categories/
+Allow: /about.html
+Allow: /contact.html
+
+# Crawl delay
+Crawl-delay: 1 

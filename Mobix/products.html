@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محصولات دیجیتال | Mobix - فروشگاه آنلاین</title>
+    <meta name="description" content="محصولات دیجیتال Mobix شامل موبایل، تبلت، لپ‌تاپ، کامپیوتر، مانیتور و لوازم جانبی. خرید آنلاین با قیمت مناسب">
+    <meta name="keywords" content="محصولات دیجیتال, موبایل, تبلت, لپ‌تاپ, کامپیوتر, مانیتور, خرید آنلاین, Mobix">
+    <meta name="author" content="Mobix">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mobix.ir/products.html">
+    <meta property="og:title" content="محصولات دیجیتال | Mobix">
+    <meta property="og:description" content="محصولات دیجیتال با کیفیت بالا">
+    <meta property="og:image" content="https://mobix.ir/assets/img/logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mobix.ir/products.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
+    
+    <style>
+        .search-filter-section {
+            background: var(--card-bg);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .input-group {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            width: 100%;
+            flex-direction: row-reverse !important;
+        }
+
+        .search-box {
+            background: var(--dark-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 12px 20px;
+            color: var(--text-primary);
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+        }
+        
+        .filter-card {
+            background: var(--dark-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .filter-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 0.5rem;
+        }
+        
+        .filter-select,
+        .filter-input {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: var(--text-primary);
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-select:focus,
+        .filter-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+        
+        .price-range {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .price-range input {
+            flex: 1;
+        }
+        
+        .filter-btn {
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .filter-btn:hover {
+            background: var(--black);
+            transform: translateY(-2px);
+        }
+        
+        .clear-filters {
+            background: var(--dark-gray);
+            color: var(--text-primary);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        .clear-filters:hover {
+            background: var(--black);
+        }
+        
+        .results-info {
+            background: var(--card-bg);
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .sort-select {
+            padding: 8px 15px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 8px;
+            background: var(--card-bg);
+            color: var(--text-primary);
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        
+        .page-btn {
+            padding: 10px 15px;
+            border: 2px solid var(--primary-blue);
+            background: var(--card-bg);
+            color: var(--primary-blue);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .page-btn.active {
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+        }
+        
+        .page-btn:hover {
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+        
+        .no-results i {
+            font-size: 4rem;
+            color: var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        .product-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--error-red);
+            color: var(--text-primary);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+        
+        .current-price {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-mobile-alt me-2"></i>
+                <span>Mobix</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تماس</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <a href="cart.html" class="btn btn-outline me-2 position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="cartCount">0</span>
+                    </a>
+                    
+                    <div class="dropdown">
+                        <button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html">ورود</a></li>
+                            <li><a class="dropdown-item" href="signup.html">ثبت نام</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="profile.html">پروفایل</a></li>
+                            <li><a class="dropdown-item" href="orders.html">سفارشات</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter-section" style="margin-top: 90px;">
+        <div class="container">
+            <div class="row">
+                <!-- Search Bar -->
+                <div class="col-lg-8 col-md-10 mx-auto mb-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control search-box" id="searchInput" placeholder="جستجو در محصولات...">
+                        <button class="btn btn-primary" type="button" onclick="searchProducts()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Filters Sidebar -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="filter-card">
+                        <h5 class="filter-title">فیلترها</h5>
+                        
+                        <div class="filter-group mb-3">
+                            <label class="form-label">دسته‌بندی</label>
+                            <select class="filter-select" id="categoryFilter">
+                                <option value="">همه دسته‌ها</option>
+                                <option value="mobile">موبایل</option>
+                                <option value="tablet">تبلت</option>
+                                <option value="laptop">لپ‌تاپ</option>
+                                <option value="desktop">کامپیوتر</option>
+                                <option value="monitor">مانیتور</option>
+                                <option value="accessories">لوازم جانبی</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group mb-3">
+                            <label class="form-label">برند</label>
+                            <select class="filter-select" id="brandFilter">
+                                <option value="">همه برندها</option>
+                                <option value="samsung">سامسونگ</option>
+                                <option value="apple">اپل</option>
+                                <option value="xiaomi">شیائومی</option>
+                                <option value="huawei">هوآوی</option>
+                                <option value="asus">ایسوس</option>
+                                <option value="lenovo">لنوو</option>
+                                <option value="hp">اچ‌پی</option>
+                                <option value="dell">دل</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group mb-3">
+                            <label class="form-label">محدوده قیمت</label>
+                            <div class="price-range">
+                                <input type="number" class="filter-input" id="minPrice" placeholder="حداقل">
+                                <span>تا</span>
+                                <input type="number" class="filter-input" id="maxPrice" placeholder="حداکثر">
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group mb-3">
+                            <label class="form-label">امتیاز</label>
+                            <select class="filter-select" id="ratingFilter">
+                                <option value="">همه امتیازات</option>
+                                <option value="5">5 ستاره</option>
+                                <option value="4">4 ستاره و بالاتر</option>
+                                <option value="3">3 ستاره و بالاتر</option>
+                                <option value="2">2 ستاره و بالاتر</option>
+                                <option value="1">1 ستاره و بالاتر</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group mb-3">
+                            <label class="form-label">وضعیت موجودی</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inStockFilter">
+                                <label class="form-check-label" for="inStockFilter">
+                                    فقط موجود
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button class="filter-btn" onclick="applyFilters()">
+                            <i class="fas fa-filter"></i> اعمال فیلتر
+                        </button>
+                        
+                        <button class="clear-filters" onclick="clearFilters()">
+                            <i class="fas fa-times"></i> پاک کردن فیلترها
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Products Section -->
+                <div class="col-lg-9 col-md-8">
+                    <!-- Results Info -->
+                    <div class="results-info" id="resultsInfo" style="display: none;">
+                        <div>
+                            <span id="resultsCount">0 محصول یافت شد</span>
+                        </div>
+                        <div>
+                            <select class="sort-select" id="sortSelect" onchange="sortProducts()">
+                                <option value="name">مرتب‌سازی: نام</option>
+                                <option value="price_asc">مرتب‌سازی: قیمت (کم به زیاد)</option>
+                                <option value="price_desc">مرتب‌سازی: قیمت (زیاد به کم)</option>
+                                <option value="rating">مرتب‌سازی: امتیاز</option>
+                                <option value="newest">مرتب‌سازی: جدیدترین</option>
+                                <option value="popular">مرتب‌سازی: محبوب‌ترین</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Products Grid -->
+                    <div class="product-grid" id="productGrid">
+                        <!-- محصولات اینجا نمایش داده می‌شوند -->
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination" id="pagination" style="display: none;">
+                        <!-- Pagination buttons will be added here -->
+                    </div>
+                    
+                    <!-- No Results -->
+                    <div class="no-results" id="noResults" style="display: none;">
+                        <i class="fas fa-search"></i>
+                        <h4>محصولی یافت نشد</h4>
+                        <p>لطفاً کلمات کلیدی یا فیلترهای دیگری را امتحان کنید.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-section">
+                        <h5 class="footer-logo mb-3">
+                            <i class="fas fa-mobile-alt me-2"></i>Mobix
+                        </h5>
+                        <p class="text-muted" style="color: #ffffff;">
+                            فروشگاه آنلاین Mobix، ارائه‌دهنده بهترین محصولات دیجیتال با کیفیت تضمین شده و قیمت مناسب.
+                        </p>
+                        <div class="social-links" style="list-style: none">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>محصولات</h6>
+                        <ul class="footer-links" style="list-style: none">
+                            <li><a href="products.html?category=mobile">موبایل</a></li>
+                            <li><a href="products.html?category=tablet">تبلت</a></li>
+                            <li><a href="products.html?category=laptop">لپ‌تاپ</a></li>
+                            <li><a href="products.html?category=desktop">کامپیوتر</a></li>
+                            <li><a href="products.html?category=accessories">لوازم جانبی</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>خدمات</h6>
+                        <ul class="footer-links" style="list-style: none">
+                            <li><a href="about.html">درباره ما</a></li>
+                            <li><a href="contact.html">تماس</a></li>
+                            <li><a href="shipping.html">نحوه ارسال</a></li>
+                            <li><a href="warranty.html">گارانتی</a></li>
+                            <li><a href="return.html">بازگشت</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>حساب کاربری</h6>
+                        <ul class="footer-links" style="list-style: none">
+                            <li><a href="login.html">ورود</a></li>
+                            <li><a href="signup.html">ثبت نام</a></li>
+                            <li><a href="profile.html">پروفایل</a></li>
+                            <li><a href="orders.html">سفارشات</a></li>
+                            <li><a href="wishlist.html">علاقه‌مندی‌ها</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h6>پشتیبانی</h6>
+                        <ul class="footer-links" style="list-style: none">
+                            <li><a href="faq.html">سوالات متداول</a></li>
+                            <li><a href="contact.html">تماس با ما</a></li>
+                            <li><a href="privacy.html">حریم خصوصی</a></li>
+                            <li><a href="terms.html">قوانین و مقررات</a></li>
+                            <li><a href="help.html">راهنما</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; ۱۴۰۲ Mobix. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // متغیرهای سراسری
+        let currentFilters = {
+            search: '',
+            category: '',
+            brand: '',
+            min_price: '',
+            max_price: '',
+            rating: '',
+            in_stock: false,
+            sort: 'name',
+            page: 1
+        };
+        
+        let currentProducts = [];
+        let currentPagination = {};
+        
+        // نمایش محصولات از API
+        async function displayProducts(filters = {}) {
+            try {
+                // ترکیب فیلترهای فعلی با فیلترهای جدید
+                const finalFilters = { ...currentFilters, ...filters };
+                currentFilters = finalFilters;
+                
+                // ساخت URL با پارامترها
+                const params = new URLSearchParams();
+                Object.keys(finalFilters).forEach(key => {
+                    if (finalFilters[key] && finalFilters[key] !== '') {
+                        params.append(key, finalFilters[key]);
+                    }
+                });
+                
+                // داده‌های نمونه برای نمایش (نمونه کار)
+                const sampleProducts = [
+                    {
+                        id: 1,
+                        name: "گوشی هوشمند Galaxy S21",
+                        description: "گوشی هوشمند سامسونگ با دوربین پیشرفته",
+                        short_description: "گوشی هوشمند سامسونگ با دوربین پیشرفته و پردازنده قدرتمند",
+                        price: 25000000,
+                        sale_price: 22000000,
+                        rating: 4.5,
+                        total_reviews: 128,
+                        image_url: "assets/img/phone1.jpg"
+                    },
+                    {
+                        id: 2,
+                        name: "لپ‌تاپ Dell XPS 13",
+                        description: "لپ‌تاپ فوق‌العاده سبک",
+                        short_description: "لپ‌تاپ فوق‌العاده سبک با صفحه نمایش بی‌نهایت",
+                        price: 45000000,
+                        sale_price: 42000000,
+                        rating: 4.8,
+                        total_reviews: 95,
+                        image_url: "assets/img/laptop1.jpg"
+                    }
+                ];
+                
+                currentProducts = sampleProducts;
+                currentPagination = { total_pages: 1, current_page: 1 };
+                
+                displayProductGrid();
+                displayPagination();
+                updateResultsInfo();
+        }
+        
+        // نمایش گرید محصولات
+        function displayProductGrid() {
+            const grid = document.getElementById('productGrid');
+            const noResults = document.getElementById('noResults');
+            const resultsInfo = document.getElementById('resultsInfo');
+            
+            if (currentProducts.length > 0) {
+                grid.style.display = 'grid';
+                noResults.style.display = 'none';
+                resultsInfo.style.display = 'flex';
+                
+                grid.innerHTML = '';
+                currentProducts.forEach(product => {
+                    const rating = parseFloat(product.rating || 0);
+                    const reviewCount = parseInt(product.total_reviews || 0);
+                    const price = parseFloat(product.sale_price || product.price);
+                    const originalPrice = parseFloat(product.price);
+                    const hasDiscount = product.sale_price && product.sale_price < product.price;
+                    
+                    const productCard = `
+                        <div class="product-card">
+                            <div class="product-image-container">
+                                <img src="${product.image_url || 'assets/img/placeholder.jpg'}" alt="${product.name}" class="product-image" onclick="viewProduct(${product.id})">
+                                ${hasDiscount ? `<span class="discount-badge">${Math.round(((originalPrice - price) / originalPrice) * 100)}% تخفیف</span>` : ''}
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title" onclick="viewProduct(${product.id})">${product.name}</h5>
+                                <p class="product-description">${product.short_description || product.description.substring(0, 100)}...</p>
+                                
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        ${generateStarRating(rating)}
+                                    </div>
+                                    <span class="rating-count">(${reviewCount})</span>
+                                </div>
+                                
+                                <div class="product-price">
+                                    ${hasDiscount ? `<span class="original-price">${formatPrice(originalPrice)}</span>` : ''}
+                                    <span class="current-price">${formatPrice(price)}</span>
+                                </div>
+                                
+                                <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
+                                    <i class="fas fa-shopping-cart me-2"></i>افزودن به سبد
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    grid.innerHTML += productCard;
+                });
+            } else {
+                showNoResults();
+            }
+        }
+        
+        // تولید ستاره‌های امتیاز
+        function generateStarRating(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += '<i class="fas fa-star text-warning"></i>';
+                } else if (i - rating < 1) {
+                    stars += '<i class="fas fa-star-half-alt text-warning"></i>';
+                } else {
+                    stars += '<i class="far fa-star text-warning"></i>';
+                }
+            }
+            return stars;
+        }
+        
+        // نمایش pagination
+        function displayPagination() {
+            const pagination = document.getElementById('pagination');
+            
+            if (currentPagination.total_pages > 1) {
+                pagination.style.display = 'flex';
+                pagination.innerHTML = '';
+                
+                // دکمه قبلی
+                if (currentPagination.current_page > 1) {
+                    pagination.innerHTML += `
+                        <a href="#" class="page-btn" onclick="changePage(${currentPagination.current_page - 1})">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    `;
+                }
+                
+                // شماره صفحات
+                for (let i = 1; i <= currentPagination.total_pages; i++) {
+                    if (i === currentPagination.current_page) {
+                        pagination.innerHTML += `<span class="page-btn active">${i}</span>`;
+                    } else {
+                        pagination.innerHTML += `
+                            <a href="#" class="page-btn" onclick="changePage(${i})">${i}</a>
+                        `;
+                    }
+                }
+                
+                // دکمه بعدی
+                if (currentPagination.current_page < currentPagination.total_pages) {
+                    pagination.innerHTML += `
+                        <a href="#" class="page-btn" onclick="changePage(${currentPagination.current_page + 1})">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                    `;
+                }
+            } else {
+                pagination.style.display = 'none';
+            }
+        }
+        
+        // تغییر صفحه
+        function changePage(page) {
+            displayProducts({ page: page });
+        }
+        
+        // به‌روزرسانی اطلاعات نتایج
+        function updateResultsInfo() {
+            const resultsCount = document.getElementById('resultsCount');
+            const sortSelect = document.getElementById('sortSelect');
+            
+            resultsCount.textContent = `${currentPagination.total_products} محصول یافت شد`;
+            sortSelect.value = currentFilters.sort;
+        }
+        
+        // بارگذاری دسته‌بندی‌ها
+        function loadCategories(categories) {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const currentValue = categoryFilter.value;
+            
+            categoryFilter.innerHTML = '<option value="">همه دسته‌ها</option>';
+            if (categories) {
+                categories.forEach(category => {
+                    categoryFilter.innerHTML += `<option value="${category}">${category}</option>`;
+                });
+            }
+            
+            categoryFilter.value = currentValue;
+        }
+        
+        // به‌روزرسانی محدوده قیمت
+        function updatePriceRange(priceRange) {
+            const minPrice = document.getElementById('minPrice');
+            const maxPrice = document.getElementById('maxPrice');
+            
+            if (priceRange && !minPrice.placeholder.includes('حداقل')) {
+                minPrice.placeholder = `حداقل ${formatPrice(priceRange.min_price)}`;
+            }
+            if (priceRange && !maxPrice.placeholder.includes('حداکثر')) {
+                maxPrice.placeholder = `حداکثر ${formatPrice(priceRange.max_price)}`;
+            }
+        }
+        
+        // نمایش پیام عدم وجود نتیجه
+        function showNoResults() {
+            const grid = document.getElementById('productGrid');
+            const noResults = document.getElementById('noResults');
+            const resultsInfo = document.getElementById('resultsInfo');
+            const pagination = document.getElementById('pagination');
+            
+            grid.style.display = 'none';
+            noResults.style.display = 'block';
+            resultsInfo.style.display = 'none';
+            pagination.style.display = 'none';
+        }
+        
+        // جستجو
+        function searchProducts() {
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            displayProducts({ search: searchTerm, page: 1 });
+        }
+        
+        // اعمال فیلترها
+        function applyFilters() {
+            const category = document.getElementById('categoryFilter').value;
+            const brand = document.getElementById('brandFilter').value;
+            const minPrice = document.getElementById('minPrice').value;
+            const maxPrice = document.getElementById('maxPrice').value;
+            const rating = document.getElementById('ratingFilter').value;
+            const inStock = document.getElementById('inStockFilter').checked;
+            
+            displayProducts({
+                category: category,
+                brand: brand,
+                min_price: minPrice,
+                max_price: maxPrice,
+                rating: rating,
+                in_stock: inStock,
+                page: 1
+            });
+        }
+        
+        // پاک کردن فیلترها
+        function clearFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('categoryFilter').value = '';
+            document.getElementById('brandFilter').value = '';
+            document.getElementById('minPrice').value = '';
+            document.getElementById('maxPrice').value = '';
+            document.getElementById('ratingFilter').value = '';
+            document.getElementById('inStockFilter').checked = false;
+            document.getElementById('sortSelect').value = 'name';
+            
+            displayProducts({
+                search: '',
+                category: '',
+                brand: '',
+                min_price: '',
+                max_price: '',
+                rating: '',
+                in_stock: false,
+                sort: 'name',
+                page: 1
+            });
+        }
+        
+        // مرتب‌سازی
+        function sortProducts() {
+            const sortValue = document.getElementById('sortSelect').value;
+            displayProducts({ sort: sortValue, page: 1 });
+        }
+        
+        // فرمت کردن قیمت
+        function formatPrice(price) {
+            return new Intl.NumberFormat('fa-IR').format(price) + ' تومان';
+        }
+        
+        // مشاهده جزئیات محصول
+        function viewProduct(productId) {
+            window.location.href = `product-detail.html?id=${productId}`;
+        }
+        
+        // افزودن به سبد خرید (نمونه کار)
+        function addToCart(productId) {
+            alert('محصول با موفقیت به سبد خرید اضافه شد! (این یک نمونه کار است)');
+        }
+        
+        // به‌روزرسانی تعداد سبد خرید (نمونه کار)
+        function updateCartCount() {
+            // نمایش تعداد ثابت برای نمونه کار
+            const cartCount = document.getElementById('cartCount');
+            if (cartCount) {
+                cartCount.textContent = '3';
+            }
+        }
+        
+        // جستجو با Enter
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchProducts();
+            }
+        });
+        
+        // بارگذاری فیلترهای اولیه از URL
+        function loadInitialFilters() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            const search = urlParams.get('search') || '';
+            const category = urlParams.get('category') || '';
+            
+            if (search) {
+                document.getElementById('searchInput').value = search;
+                currentFilters.search = search;
+            }
+            
+            if (category) {
+                document.getElementById('categoryFilter').value = category;
+                currentFilters.category = category;
+            }
+        }
+        
+        // راه‌اندازی اولیه
+        document.addEventListener('DOMContentLoaded', function() {
+            loadInitialFilters();
+            displayProducts();
+            updateCartCount();
+        });
+    </script>
+</body>
+</html> 
